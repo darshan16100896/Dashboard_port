@@ -2,6 +2,7 @@ import { Inter, Oswald } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
 import Image from "next/image";
 import LeftBg from "../../public/images/docs-left.png";
 import RightBg from "../../public/images/docs-right.png";
@@ -57,7 +58,7 @@ export default function RootLayout({ children }) {
 
           <Header />
           {children}
-          <footer />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
