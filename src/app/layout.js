@@ -1,13 +1,21 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Oswald } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import Header from "@/components/header/header";
+import Image from "next/image";
+import LeftBg from "../../public/images/docs-left.png";
+import RightBg from "../../public/images/docs-right.png";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const oswald = Oswald({
+  variable: "--font-oswald",
   subsets: ["latin"],
 });
 
@@ -18,11 +26,39 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html
+      lang="en"
+      className={`${inter.variable} ${oswald.variable} dark`}
+      suppressHydrationWarning
+    >
+      <body className="font-sans font-body antialiased relative overflow-x-hidden">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {/* Left Sticky Background Image */}
+          <div className="fixed top-0 left-[-180px] h-full w-auto scale-150 pointer-events-none -z-10 opacity-70">
+            <Image
+              src={LeftBg}
+              alt="Left Background"
+              className="object-contain h-full w-auto"
+              quality={100}
+              priority
+            />
+          </div>
+
+          {/* Right Sticky Background Image */}
+          <div className="fixed top-0 right-[-30px] h-full w-auto scale-250 pointer-events-none -z-10 opacity-50">
+            <Image
+              src={RightBg}
+              alt="Right Background"
+              className="object-cover h-full w-auto"
+              quality={100}
+              priority
+            />
+          </div>
+
+          <Header />
+          {children}
+          <footer />
+        </ThemeProvider>
       </body>
     </html>
   );
