@@ -2,57 +2,105 @@ import AnimatedIconButton from "@/components/animatedButton/animatedButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBehance, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { BackgroundRippleEffect } from "../ui/background-ripple-effect";
-import PulseGrid from "../baclgroundripple/backgroundrippleeffect";
+// import PulseGrid from "../baclgroundripple/backgroundrippleeffect";
+import Headshot from "../../../public/images/headshot-image.webp";
+
 import {
+  faBugSlash,
   faCode,
-  faLayerGroup,
   faPaintBrush,
-  faPalette,
-  faVial,
+  faSwatchbook,
+  faWandMagicSparkles,
 } from "@fortawesome/free-solid-svg-icons";
+import { useTheme } from "next-themes";
+import { Slash } from "lucide-react";
+import ProjectImage from "../../../public/Images/my-works.png";
+import Image from "next/image";
+import StatsCard from "../stats";
+import ServicesOffering from "../serviceOffering/page";
 
 export default function CardGrid() {
   return (
     <section className="w-full text-white py-16" id="next-section">
       <div className="max-w-[1360px] mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[250px]">
         {/* Profile Card (taller) */}
-        <div className="col-span-2 row-span-2 p-6 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:scale-[1.02] transition flex flex-col justify-center">
-          <div className="flex gap-9">
-            <div className="w-1/2 h-120 rounded-lg bg-gradient-to-tr from-blue-500 to-purple-500"></div>
-            <div className="w-1/2">
-              <p className="text-[16px] text-gray-300">UI / UX Developer</p>
-              <h2 className="text-6xl font-bold uppercase mb-4 font-heading">
-                Darshan <br /> Makwana
+        <div
+          className="col-span-2 row-span-2 p-4 sm:p-6 rounded-2xl 
+  dark:bg-white/5 dark:hover:bg-white/10 
+  backdrop-blur-md border border-white/10 shadow-lg 
+  transition hover:scale-[1.01]"
+        >
+          <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center">
+            {/* IMAGE */}
+            <div className="w-full md:w-1/2 flex justify-center">
+              <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-full md:h-auto rounded-xl overflow-hidden">
+                <Image
+                  src={Headshot}
+                  alt="Darshan Makwana"
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* CONTENT */}
+            <div className="w-full md:w-1/2 text-center md:text-left">
+              {/* NAME */}
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase mb-3 sm:mb-4 font-heading text-gray-900 dark:text-[#F9FAFB] leading-tight">
+                Darshan <br className="hidden sm:block" /> Makwana
               </h2>
-              <p className="text-lg text-gray-300">
-                A passionate UI/UX designer with 5+ years of experience,
-                crafting seamless experiences.
+
+              {/* TAGLINE */}
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-3 sm:mb-4 dark:text-[#C7D2FE]">
+                Designing intuitive digital experiences that feel effortless.
+              </p>
+
+              {/* EXPERIENCE */}
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-[#C7D2FE]">
+                6+ years crafting user-focused products for startups & growing
+                brands.
+              </p>
+
+              {/* STATUS BADGE */}
+              <div
+                className="py-2 px-4 flex items-center justify-center md:justify-start 
+        dark:bg-[#031f1c] gap-2 border border-gray-300 dark:border-[#073d38] 
+        rounded-md w-fit mx-auto md:mx-0 mt-4"
+              >
+                <div className="dark:bg-[#2ec4b6] h-2 w-2 rounded-full animate-pulse"></div>
+
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-[#2ec4b6]">
+                  Available for freelance
+                </p>
+              </div>
+
+              {/* SPECIALIZATION */}
+              <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-[#C7D2FE] mt-4">
+                Specializing in SaaS, Web Apps & Modern UI Systems
               </p>
             </div>
           </div>
         </div>
 
         {/* RIGHT SIDE TOP SMALL */}
-        <div className="col-span-2 row-span-1 relative overflow-hidden rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:scale-[1.02] transition flex justify-center">
-          <PulseGrid />
-          {/* Card Content */}
-          <div className="absolute bottom-8 left-6 right-6 flex justify-between items-center">
-            <div className="w-1/2">
-              <p className="text-[14px] text-gray-600 dark:text-white/60 font-regular uppercase">
-                Articles
-              </p>
-              <h3 className="text-3xl font-bold">LinkedIn</h3>
-            </div>
-            <AnimatedIconButton href="https://google.com" />
-          </div>
-        </div>
+        <div className="col-span-2 row-span-1 relative overflow-hidden rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:scale-[1.02] transition flex justify-center"></div>
 
         {/* Two stacked boxes */}
-        <div className=" p-6 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:scale-[1.02] transition flex flex-col justify-center row-span-1">
+        <div className="group p-6 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:scale-[1.02] transition flex flex-col justify-center row-span-1">
           <h3 className="text-lg font-semibold mb-2">Box 1</h3>
         </div>
-        <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-lg hover:scale-[1.02] transition flex flex-col justify-center row-span-1">
-          <div className="flex justify-between items-center">
+        <div className=" group p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-lg hover:scale-[1.02] transition flex flex-col justify-center row-span-1">
+          <div className="flex justify-center mb-6 absolute top-8 left-0 right-0">
+            <Image
+              src={ProjectImage}
+              alt="Projects Icon"
+              width={180}
+              height={180}
+              quality={100}
+              className=""
+            />
+          </div>
+          <div className="absolute bottom-8 left-6 right-6 flex justify-between items-center">
             <div>
               <p className="text-[14px] text-white/60 font-regular uppercase">
                 showcase
@@ -126,170 +174,12 @@ export default function CardGrid() {
                 LinkedIn
               </h3>
             </div>
-            <AnimatedIconButton href="https://www.linkedin.com/in/darshan-makwana-4a743514a/" />
+            <AnimatedIconButton href="/articles" />
           </div>
         </div>
 
         {/* Service Offering (wide card) */}
-        <div
-          className="col-span-2 row-span-1 p-6 rounded-2xl 
-  bg-white/70 dark:bg-white/2 dark:hover:bg-white/5 
-  backdrop-blur-md border border-gray-300 dark:border-white/10 
-  shadow-lg relative transform transition-transform duration-300 ease-out hover:scale-[1.02]"
-        >
-          {/* Service Icons Section */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mb-20">
-            {/* UI/UX Design Excellence */}
-            <div className="relative flex flex-col items-center text-center group">
-              <div
-                className="w-16 h-16 flex items-center justify-center rounded-xl 
-        bg-white/10 dark:bg-white/20 
-        border border-white/20 shadow-md cursor-pointer 
-        transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] 
-        group-hover:bg-[#006fee]"
-              >
-                <FontAwesomeIcon
-                  icon={faPaintBrush}
-                  className="text-gray-800 dark:text-white text-2xl 
-          transition-transform duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] 
-          group-hover:scale-110"
-                />
-              </div>
-
-              {/* Tooltip */}
-              <span
-                className="absolute -top-10 px-2 py-1 text-xs rounded-md shadow-md opacity-0 scale-75
-        group-hover:opacity-100 group-hover:scale-100 group-hover:-top-10
-        transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]
-        bg-[#006fee] text-white"
-              >
-                UI/UX Design
-                <span className="absolute left-1/2 -bottom-1 w-2 h-2 bg-[#006fee] rotate-45 -translate-x-1/2"></span>
-              </span>
-            </div>
-
-            {/* Interactive Prototyping */}
-            <div className="relative flex flex-col items-center text-center group">
-              <div
-                className="w-16 h-16 flex items-center justify-center rounded-xl 
-        bg-white/10 dark:bg-white/20 
-        border border-white/20 shadow-md cursor-pointer 
-        transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] 
-        group-hover:bg-[#ff9800]"
-              >
-                <FontAwesomeIcon
-                  icon={faVial}
-                  className="text-gray-800 dark:text-white text-2xl 
-          transition-transform duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] 
-          group-hover:scale-110"
-                />
-              </div>
-              <span
-                className="absolute -top-10 px-2 py-1 text-xs rounded-md shadow-md opacity-0 scale-75
-        group-hover:opacity-100 group-hover:scale-100 group-hover:-top-10
-        transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]
-        bg-[#ff9800] text-white"
-              >
-                Prototyping
-                <span className="absolute left-1/2 -bottom-1 w-2 h-2 bg-[#ff9800] rotate-45 -translate-x-1/2"></span>
-              </span>
-            </div>
-
-            {/* Responsive Front-End */}
-            <div className="relative flex flex-col items-center text-center group">
-              <div
-                className="w-16 h-16 flex items-center justify-center rounded-xl 
-        bg-white/10 dark:bg-white/20 
-        border border-white/20 shadow-md cursor-pointer 
-        transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] 
-        group-hover:bg-[#4cafef]"
-              >
-                <FontAwesomeIcon
-                  icon={faCode}
-                  className="text-gray-800 dark:text-white text-2xl 
-          transition-transform duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] 
-          group-hover:scale-110"
-                />
-              </div>
-              <span
-                className="absolute -top-10 px-2 py-1 text-xs rounded-md shadow-md opacity-0 scale-75
-        group-hover:opacity-100 group-hover:scale-100 group-hover:-top-10
-        transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]
-        bg-[#4cafef] text-white"
-              >
-                Front-End
-                <span className="absolute left-1/2 -bottom-1 w-2 h-2 bg-[#4cafef] rotate-45 -translate-x-1/2"></span>
-              </span>
-            </div>
-
-            {/* Visual Branding */}
-            <div className="relative flex flex-col items-center text-center group">
-              <div
-                className="w-16 h-16 flex items-center justify-center rounded-xl 
-        bg-white/10 dark:bg-white/20 
-        border border-white/20 shadow-md cursor-pointer 
-        transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] 
-        group-hover:bg-[#e4405f]"
-              >
-                <FontAwesomeIcon
-                  icon={faPalette}
-                  className="text-gray-800 dark:text-white text-2xl 
-          transition-transform duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] 
-          group-hover:scale-110"
-                />
-              </div>
-              <span
-                className="absolute -top-10 px-2 py-1 text-xs rounded-md shadow-md opacity-0 scale-75
-        group-hover:opacity-100 group-hover:scale-100 group-hover:-top-10
-        transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]
-        bg-[#e4405f] text-white"
-              >
-                Branding
-                <span className="absolute left-1/2 -bottom-1 w-2 h-2 bg-[#e4405f] rotate-45 -translate-x-1/2"></span>
-              </span>
-            </div>
-
-            {/* Design Systems */}
-            <div className="relative flex flex-col items-center text-center group">
-              <div
-                className="w-16 h-16 flex items-center justify-center rounded-xl 
-        bg-white/10 dark:bg-white/20 
-        border border-white/20 shadow-md cursor-pointer 
-        transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] 
-        group-hover:bg-[#9c27b0]"
-              >
-                <FontAwesomeIcon
-                  icon={faLayerGroup}
-                  className="text-gray-800 dark:text-white text-2xl 
-          transition-transform duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] 
-          group-hover:scale-110"
-                />
-              </div>
-              <span
-                className="absolute -top-10 px-2 py-1 text-xs rounded-md shadow-md opacity-0 scale-75
-        group-hover:opacity-100 group-hover:scale-100 group-hover:-top-10
-        transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)]
-        bg-[#9c27b0] text-white"
-              >
-                Wireframe
-                <span className="absolute left-1/2 -bottom-1 w-2 h-2 bg-[#9c27b0] rotate-45 -translate-x-1/2"></span>
-              </span>
-            </div>
-          </div>
-
-          {/* Title + Button */}
-          <div className="absolute bottom-8 left-6 right-6 flex justify-between items-center">
-            <div className="w-1/2">
-              <p className="text-[14px] text-gray-600 dark:text-white/60 uppercase tracking-wide">
-                Specializing
-              </p>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
-                Service Offering
-              </h3>
-            </div>
-            <AnimatedIconButton href="https://google.com" />
-          </div>
-        </div>
+        <ServicesOffering />
 
         {/* Profile Links */}
         <div className="col-span-1 row-span-1 p-6 rounded-2xl bg-white/70 dark:bg-white/3 dark:hover:bg-white/5 backdrop-blur-md border border-gray-300 dark:border-white/10 shadow-lg relative hover:scale-[1.02] transition">
@@ -356,8 +246,7 @@ export default function CardGrid() {
 
         {/* Stats */}
         <div className="col-span-2 p-6 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg flex flex-col items-center justify-center hover:scale-[1.02] transition">
-          <h3 className="text-3xl font-bold">07</h3>
-          <p className="text-gray-400 text-sm">Years Experience</p>
+          <StatsCard />
         </div>
 
         {/* CTA */}
