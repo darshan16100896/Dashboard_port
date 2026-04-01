@@ -6,7 +6,8 @@
 /* globals.css */
 @layer utilities {
   .aurora-bg {
-    background: radial-gradient(
+    background:
+      radial-gradient(
         circle at 30% 30%,
         rgba(0, 111, 238, 0.4),
         transparent 50%
@@ -200,4 +201,14 @@ html {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   animation: signature-draw 3s ease forwards;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(139, 92, 246, 1);
+  }
 }

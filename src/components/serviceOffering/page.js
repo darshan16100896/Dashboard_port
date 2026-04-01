@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faBugSlash,
   faCode,
@@ -36,7 +38,7 @@ const services = [
 
 export default function ServicesOffering() {
   return (
-    <div className="col-span-2 p-4 sm:p-6 rounded-2xl bg-white/70 dark:bg-white/2 backdrop-blur-md border border-gray-300 dark:border-white/10 shadow-lg hover:scale-[1.02] transition">
+    <div className="col-span-2 p-4 sm:p-6 rounded-2xl dark:bg-white/2 bg-[#f7f7f7] backdrop-blur-md border border-gray-300 dark:border-white/10 shadow-lg hover:scale-[1.02] transition">
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-5 mb-16">
         {services.map((item, index) => (
           <div

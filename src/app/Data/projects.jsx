@@ -5,21 +5,62 @@ const projects = [
     title: "Barbaros Barbers Davos",
     category: "Web Design",
 
-    //Thumbnail
     thumbnail: "/images/ui-1.jpg",
-    // 🔥 Hero banner
     banner: "/images/barbaros-barber-banner.jpg",
 
-    // 🔥 Short intro (use first paragraph)
     summary:
       "A bold and modern landing page for Barbaros Barbers Davos, crafted to reflect strength, masculinity, and premium quality through dark visuals and striking red accents.",
 
-    elementImages: [
-      "/images/e-barbaros-01.jpg",
-      "/images/e-barbaros-02.jpg", // duplicate or second layout image
+    // ✅ ADD THIS
+    problem:
+      "The brand lacked a strong digital presence and needed a website that visually communicated premium quality and masculinity.",
+
+    // ✅ ADD THIS
+    solution:
+      "I designed a bold, dark-themed layout with strong typography and red accents to reflect the brand’s identity and create a powerful first impression.",
+
+    // ✅ ADD THIS
+    outcome:
+      "The final design delivers a premium look and feel, improving brand perception and creating a strong visual identity online.",
+
+    elementImages: ["/images/e-barbaros-01.jpg", "/images/e-barbaros-02.jpg"],
+
+    tech: [
+      "UI Design",
+      "Responsive Design",
+      "Interaction Design",
+      "Photoshop",
+      "Figma",
     ],
 
-    // 🔥 Tech / tools
+    behance:
+      "https://www.behance.net/gallery/130100457/Creative-Homepage-Design",
+  },
+  {
+    id: "ui-1",
+    title: "Barbaros Barbers Davos",
+    category: "Web Design",
+
+    thumbnail: "/images/ui-1.jpg",
+    banner: "/images/barbaros-barber-banner.jpg",
+
+    summary:
+      "A bold and modern landing page for Barbaros Barbers Davos, crafted to reflect strength, masculinity, and premium quality through dark visuals and striking red accents.",
+
+    // ✅ ADD THIS
+    problem:
+      "The brand lacked a strong digital presence and needed a website that visually communicated premium quality and masculinity.",
+
+    // ✅ ADD THIS
+    solution:
+      "I designed a bold, dark-themed layout with strong typography and red accents to reflect the brand’s identity and create a powerful first impression.",
+
+    // ✅ ADD THIS
+    outcome:
+      "The final design delivers a premium look and feel, improving brand perception and creating a strong visual identity online.",
+
+    elementImages: ["/images/e-barbaros-01.jpg", "/images/e-barbaros-02.jpg"],
+
     tech: [
       "UI Design",
       "Responsive Design",

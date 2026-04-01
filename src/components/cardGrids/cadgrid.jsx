@@ -18,22 +18,25 @@ import ProjectImage from "../../../public/Images/my-works.png";
 import Image from "next/image";
 import StatsCard from "../stats";
 import ServicesOffering from "../serviceOffering/page";
+import UXProcessBar from "../RecentWorkCard/page";
+import RecentWorkCard from "../RecentWorkCard/page";
+import ArticleCard from "../linkedInArticle/page";
 
 export default function CardGrid() {
   return (
-    <section className="w-full text-white py-16" id="next-section">
-      <div className="max-w-[1360px] mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-[250px]">
+    <section className="w-full text-white py-12 sm:py-16" id="next-section">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-auto gap-4 sm:gap-6">
         {/* Profile Card (taller) */}
         <div
-          className="col-span-2 row-span-2 p-4 sm:p-6 rounded-2xl 
+          className="col-span-1 sm:col-span-2 lg:col-span-2 lg:row-span-2 p-4 sm:p-6 rounded-2xl min-h-[120px] sm:min-h-[140px]  bg-[#f7f7f7]
   dark:bg-white/5 dark:hover:bg-white/10 
   backdrop-blur-md border border-white/10 shadow-lg 
   transition hover:scale-[1.01]"
         >
-          <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center">
+          <div className="flex flex-col sm:flex-col md:flex-row gap-6 md:gap-10 items-center">
             {/* IMAGE */}
             <div className="w-full md:w-1/2 flex justify-center">
-              <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-full md:h-auto rounded-xl overflow-hidden">
+              <div className="w-32 h-32 sm:w-44 sm:h-44 md:w-full md:h-auto rounded-xl overflow-hidden">
                 <Image
                   src={Headshot}
                   alt="Darshan Makwana"
@@ -83,38 +86,72 @@ export default function CardGrid() {
         </div>
 
         {/* RIGHT SIDE TOP SMALL */}
-        <div className="col-span-2 row-span-1 relative overflow-hidden rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:scale-[1.02] transition flex justify-center"></div>
-
-        {/* Two stacked boxes */}
-        <div className="group p-6 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:scale-[1.02] transition flex flex-col justify-center row-span-1">
-          <h3 className="text-lg font-semibold mb-2">Box 1</h3>
+        <div className="col-span-1 sm:col-span-2 lg:col-span-2 relative overflow-hidden rounded-2xl bg-[#f7f7f7] dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg hover:scale-[1.02] active:scale-[0.98] transition">
+          <RecentWorkCard
+            title="Redesigned onboarding flow"
+            description="Redesigned onboarding flow, driving a 28% increase in completion rate"
+            link="https://minddeft.com"
+          />
         </div>
-        <div className=" group p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/10 shadow-lg hover:scale-[1.02] transition flex flex-col justify-center row-span-1">
-          <div className="flex justify-center mb-6 absolute top-8 left-0 right-0">
-            <Image
-              src={ProjectImage}
-              alt="Projects Icon"
-              width={180}
-              height={180}
-              quality={100}
-              className=""
-            />
+
+        {/* BOX 1 */}
+
+        <ArticleCard
+          title="UI/UX Designer, Graphic Designer..."
+          description="Let’s break it down: In the world of digital design..."
+          link="https://www.linkedin.com/posts/darshan-makwana-4a743514a_uidesign-uxdesign-graphicdesign-activity-7368707492282806275-WFN4?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQD538BfbR4EKR77Cs1Oma0ubq9AtqjJ80"
+        />
+
+        {/* PROJECTS CARD */}
+        <div
+          className="
+  group
+  p-4 sm:p-5 md:p-6
+  rounded-2xl
+  bg-[#f7f7f7] dark:bg-white/3 dark:hover:bg-white/5
+  backdrop-blur-md border border-white/10 
+  shadow-lg
+  flex flex-col justify-between
+  hover:scale-[1.02] active:scale-[0.98] transition
+"
+        >
+          {/* IMAGE */}
+          <div className="flex justify-center items-center mb-4 sm:mb-6">
+            <div className="w-full h-32 sm:h-40 md:h-48 relative">
+              <Image
+                src={ProjectImage}
+                alt="Projects Icon"
+                fill
+                className="object-contain transition duration-300 group-hover:scale-105"
+                quality={100}
+              />
+            </div>
           </div>
-          <div className="absolute bottom-8 left-6 right-6 flex justify-between items-center">
+
+          {/* BOTTOM CONTENT */}
+          <div className="flex items-center justify-between gap-3">
             <div>
-              <p className="text-[14px] text-white/60 font-regular uppercase">
+              <p className="text-xs sm:text-sm text-white/60 uppercase">
                 showcase
               </p>
-              <h3 className="text-3xl font-bold">Projects</h3>
+              <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-white leading-tight">
+                Projects
+              </h3>
             </div>
+
             <AnimatedIconButton href="/portfolio" />
           </div>
         </div>
 
         {/* Articles card */}
-        <div className="col-span-1 row-span-1 p-6 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg relative hover:scale-[1.02] transition">
+        <div className="col-span-1 row-span-1 p-6 rounded-2xl bg-[#f7f7f7] dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg relative hover:scale-[1.02] active:scale-[0.98] transition">
           <div className="flex justify-center mb-6">
-            <button className="group relative">
+            <a
+              href="https://linkedin.com/in/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative block"
+            >
               {/* Notification Badge */}
               <div className="absolute -right-2 -top-2 z-10">
                 <div className="flex h-5 w-5 items-center justify-center">
@@ -127,7 +164,7 @@ export default function CardGrid() {
 
               {/* Button Body */}
               <div className="relative overflow-hidden rounded-xl bg-gradient-to-bl from-gray-900 via-gray-950 to-black p-[1px] shadow-2xl shadow-gray-500/20 group-hover:shadow-blue-500/20">
-                <div className="relative flex items-center gap-4 rounded-xl bg-gray-950 px-6 py-3 transition-all duration-300 group-hover:bg-gray-950/50">
+                <div className="relative flex items-center gap-4 rounded-xl bg-gray-950 px-4 py-2.5 sm:px-6 sm:py-3 transition-all duration-300 group-hover:bg-gray-950/50">
                   {/* LinkedIn Icon */}
                   <div className="relative flex h-10 w-10 items-center justify-center rounded-lg bg-gray-600 transition-all duration-300 group-hover:bg-[#0A66C2] group-hover:scale-110">
                     <svg
@@ -162,13 +199,13 @@ export default function CardGrid() {
                 {/* Overlay for hover effect */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-gray-600 via-gray-700 to-black opacity-20 transition-all duration-300 group-hover:from-[#0A66C2] group-hover:via-blue-600 group-hover:to-blue-800 group-hover:opacity-40"></div>
               </div>
-            </button>
+            </a>
           </div>
 
-          <div className="absolute bottom-8 left-6 right-6 flex justify-between items-center">
+          <div className="mt-6 flex items-center justify-between">
             <div className="w-1/2">
               <p className="text-[14px] text-gray-600 dark:text-white/60 font-regular uppercase">
-                Articles
+                UX Insights
               </p>
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
                 LinkedIn
@@ -182,77 +219,111 @@ export default function CardGrid() {
         <ServicesOffering />
 
         {/* Profile Links */}
-        <div className="col-span-1 row-span-1 p-6 rounded-2xl bg-white/70 dark:bg-white/3 dark:hover:bg-white/5 backdrop-blur-md border border-gray-300 dark:border-white/10 shadow-lg relative hover:scale-[1.02] transition">
-          <div className="flex justify-center mb-6">
-            <button className="group relative">
+        <div
+          className="
+  col-span-1 row-span-1
+  p-4 sm:p-5 md:p-6
+  rounded-2xl
+  bg-[#f7f7f7] dark:bg-white/3 dark:hover:bg-white/5
+  backdrop-blur-md border border-gray-300 dark:border-white/10
+  shadow-lg
+  flex flex-col justify-between
+  hover:scale-[1.02] active:scale-[0.98] transition
+"
+        >
+          {/* TOP CONTENT */}
+          <div className="flex justify-center mb-4 sm:mb-6">
+            <button className="group relative w-full max-w-[260px]">
               {/* Notification Badge */}
               <div className="absolute -right-2 -top-2 z-10">
-                <div className="flex h-5 w-5 items-center justify-center">
+                <div className="flex h-4 w-4 sm:h-5 sm:w-5 items-center justify-center">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-400 opacity-75"></span>
-                  <span className="relative inline-flex h-4 w-4 items-center justify-center rounded-full bg-gray-600 text-[6px] font-bold text-white">
+                  <span className="relative inline-flex h-3 w-3 sm:h-4 sm:w-4 items-center justify-center rounded-full bg-gray-600 text-[6px] font-bold text-white">
                     new
                   </span>
                 </div>
               </div>
 
               {/* Button Body */}
-              <div className="relative overflow-hidden rounded-xl bg-gradient-to-bl from-gray-900 via-gray-950 to-black p-[1px] shadow-2xl shadow-gray-500/20 group-hover:shadow-blue-400/30">
-                <div className="relative flex items-center gap-4 rounded-xl bg-gray-950 px-6 py-3 transition-all duration-300 group-hover:bg-gray-950/50">
-                  {/* Behance Icon */}
-                  <div className="relative flex h-10 w-10 items-center justify-center rounded-lg bg-gray-600 transition-all duration-300 group-hover:bg-[#1769FF] group-hover:scale-110">
+              <div className="relative overflow-hidden rounded-xl bg-gradient-to-bl from-gray-900 via-gray-950 to-black p-[1px] shadow-xl group-hover:shadow-blue-400/30">
+                <div
+                  className="
+          flex items-center gap-3 sm:gap-4
+          rounded-xl bg-gray-950
+          px-4 sm:px-6 py-2.5 sm:py-3
+          transition-all duration-300
+          group-hover:bg-gray-950/50
+        "
+                >
+                  {/* Icon */}
+                  <div
+                    className="
+            flex h-8 w-8 sm:h-10 sm:w-10
+            items-center justify-center
+            rounded-lg bg-gray-600
+            transition-all duration-300
+            group-hover:bg-[#1769FF] group-hover:scale-110
+          "
+                  >
                     <FontAwesomeIcon
                       icon={faBehance}
-                      className="text-white h-5 w-5"
+                      className="text-white h-4 w-4 sm:h-5 sm:w-5"
                     />
-                    <div className="absolute inset-0 rounded-lg blur-sm transition-all duration-300 group-hover:blur-md"></div>
                   </div>
 
                   {/* Text */}
                   <div className="flex flex-col items-start">
-                    <span className="text-sm font-semibold text-white">
+                    <span className="text-xs sm:text-sm font-semibold text-white">
                       Behance
                     </span>
-                    <span className="text-[10px] font-medium text-gray-400 group-hover:text-[#1769FF]">
+                    <span className="text-[9px] sm:text-[10px] font-medium text-gray-400 group-hover:text-[#1769FF]">
                       See My Projects
                     </span>
                   </div>
 
-                  {/* Pulsing dots */}
+                  {/* Dots */}
                   <div className="ml-auto flex items-center gap-1">
-                    <div className="h-1.5 w-1.5 rounded-full bg-gray-500 transition-all duration-300 group-hover:bg-[#1769FF] group-hover:scale-150"></div>
-                    <div className="h-1.5 w-1.5 rounded-full bg-gray-400 transition-all duration-300 group-hover:bg-[#1769FF]/50 group-hover:scale-150 group-hover:delay-100"></div>
-                    <div className="h-1.5 w-1.5 rounded-full bg-gray-300 transition-all duration-300 group-hover:bg-[#1769FF]/30 group-hover:scale-150 group-hover:delay-200"></div>
+                    <div className="h-1 w-1 sm:h-1.5 sm:w-1.5 rounded-full bg-gray-500 group-hover:bg-[#1769FF] group-hover:scale-150 transition"></div>
+                    <div className="h-1 w-1 sm:h-1.5 sm:w-1.5 rounded-full bg-gray-400 group-hover:bg-[#1769FF]/50 group-hover:scale-150 transition delay-100"></div>
+                    <div className="h-1 w-1 sm:h-1.5 sm:w-1.5 rounded-full bg-gray-300 group-hover:bg-[#1769FF]/30 group-hover:scale-150 transition delay-200"></div>
                   </div>
                 </div>
 
-                {/* Overlay for hover effect */}
+                {/* Overlay */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-gray-600 via-gray-700 to-black opacity-20 transition-all duration-300 group-hover:from-[#1769FF] group-hover:via-blue-500 group-hover:to-blue-800 group-hover:opacity-40"></div>
               </div>
             </button>
           </div>
 
-          <div className="absolute bottom-8 left-6 right-6 flex justify-between items-center">
-            <div className="w-1/2">
-              <p className="text-[14px] text-gray-600 dark:text-white/60 font-regular uppercase">
+          {/* BOTTOM CONTENT */}
+          <div
+            className="
+    flex items-center justify-between
+    gap-3
+  "
+          >
+            <div>
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-white/60 uppercase">
                 Stay with me
               </p>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                 Profile
               </h3>
             </div>
+
             <AnimatedIconButton href="https://www.behance.net/darshanmakwana0896" />
           </div>
         </div>
 
         {/* Stats */}
-        <div className="col-span-2 p-6 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg flex flex-col items-center justify-center hover:scale-[1.02] transition">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-2 p-6 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg flex flex-col items-center justify-center hover:scale-[1.02] active:scale-[0.98] transition">
           <StatsCard />
         </div>
 
         {/* CTA */}
-        <div className="col-span-2 p-8 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl hover:scale-[1.02] transition">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-2 p-8 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl hover:scale-[1.02] active:scale-[0.98] transition">
           <div></div>
-          <div className="absolute bottom-8 left-6 right-6 flex justify-between items-center">
+          <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="w-1/2">
               <p className="text-[14px] text-gray-600 dark:text-white/60 font-regular uppercase">
                 Contact Me

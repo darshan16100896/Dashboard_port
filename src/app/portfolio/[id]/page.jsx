@@ -64,11 +64,37 @@ export default function ProjectDetail({ params }) {
         )}
 
         {project.summary && (
-          <div className="mb-20 mt-8 text-gray-700 dark:text-gray-300">
-            <p className="text-2xl leading-relaxed mx-auto">
+          <section className="mt-16 sm:mt-20 text-center">
+            <h2 className="text-xs sm:text-sm uppercase opacity-60 mb-3">
+              Overview
+            </h2>
+
+            <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
               {project.summary}
             </p>
-          </div>
+          </section>
+        )}
+        {project.problem && (
+          <section className="mt-16 sm:mt-20 text-center">
+            <h2 className="text-xs sm:text-sm uppercase opacity-60 mb-3">
+              Problem
+            </h2>
+
+            <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              {project.problem}
+            </p>
+          </section>
+        )}
+        {project.solution && (
+          <section className="mt-16 sm:mt-20 text-center">
+            <h2 className="text-xs sm:text-sm uppercase opacity-60 mb-3">
+              Solution
+            </h2>
+
+            <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              {project.solution}
+            </p>
+          </section>
         )}
 
         {/* ================= Elements Section ================= */}
@@ -76,12 +102,12 @@ export default function ProjectDetail({ params }) {
           <h2 className="text-xl font-heading uppercase font-light mb-4">
             Elements
           </h2>
-          <p className="text-gray-700 dark:text-gray-300 max-w-2xl text-5xl font-heading uppercase font-bold">
-            See the highlights of this website.
+          <p className="text-gray-700 dark:text-gray-300 max-w-2xl text-2xl sm:text-4xl font-heading uppercase font-bold">
+            Visual exploration of the design
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {project.elementImages.map((img, idx) => (
+            {project.elementImages?.map((img, idx) => (
               <div
                 key={idx}
                 className="rounded-2xl overflow-hidden border border-white/10 dark:bg-white/5 backdrop-blur-md"
@@ -115,6 +141,17 @@ export default function ProjectDetail({ params }) {
             ))}
           </div>
         </section>
+        {project.outcome && (
+          <section className="mt-16 sm:mt-20 text-center">
+            <h2 className="text-xs sm:text-sm uppercase opacity-60 mb-3">
+              Outcome
+            </h2>
+
+            <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+              {project.outcome}
+            </p>
+          </section>
+        )}
       </div>
       {/* ===== Floating Bottom Navigation ===== */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
