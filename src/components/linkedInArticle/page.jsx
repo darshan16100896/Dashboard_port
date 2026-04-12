@@ -11,16 +11,16 @@ export default function ArticleCard({ title, description, link }) {
       className="group block h-full"
     >
       <div
-        className="h-full flex flex-col justify-between p-4 sm:p-6 rounded-2xl
-        bg-white/5 dark:bg-white/5 backdrop-blur-md border border-white/10
-        hover:bg-white/10 transition-all duration-300
-        hover:scale-[1.02] hover:shadow-[0_0_30px_rgba(139,92,246,0.15)]"
+        className="h-full flex flex-col justify-between p-4 sm:p-6 rounded-2xl bg-[#f7f7f7]
+         dark:bg-white/5 backdrop-blur-md border border-white/10
+        shadow-lg transition-all duration-300
+        hover:scale-[1.02]"
       >
         {/* TOP CONTENT */}
         <div>
           {/* Label */}
           <p
-            className="inline-block px-2.5 py-1 text-[10px] tracking-wide text-blue-500 mb-2 sm:text-xs 
+            className="inline-block px-2.5 py-1 text-[10px] tracking-wide text-blue-500 mb-4 sm:text-xs 
           rounded-full bg-blue-500/10 border border-blue-500/20"
           >
             Latest Article

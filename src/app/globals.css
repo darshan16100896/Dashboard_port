@@ -212,3 +212,8 @@ html {
     box-shadow: 0 0 18px rgba(139, 92, 246, 1);
   }
 }
+@layer components {
+  .para-label {
+    @apply text-xs sm:text-sm text-gray-600 dark:text-[#C7D2FE] uppercase;
+  }
+}

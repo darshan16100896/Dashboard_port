@@ -68,9 +68,7 @@ export default function ServicesOffering() {
 
       <div className="flex flex-col sm:flex-row sm:justify-between gap-3">
         <div>
-          <p className="text-xs sm:text-sm text-gray-600 dark:text-white/60 uppercase">
-            Specializing
-          </p>
+          <p className="para-label">Specializing</p>
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
             Service Offering
           </h3>

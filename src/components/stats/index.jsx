@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const stats = [
@@ -67,7 +66,7 @@ function StatItem({ stat, index, animate }) {
 
       {/* Number */}
       <div className="flex items-end leading-none mb-1">
-        <span className="font-bold text-white tracking-tight text-xl sm:text-2xl md:text-3xl">
+        <span className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
           {count}
         </span>
         <span className="text-purple-400 font-bold text-lg sm:text-xl ml-0.5">
@@ -76,7 +75,7 @@ function StatItem({ stat, index, animate }) {
       </div>
 
       {/* Label */}
-      <p className="text-[10px] sm:text-xs md:text-sm text-indigo-200 uppercase tracking-wider text-center leading-tight max-w-[90px] sm:max-w-none">
+      <p className="text-xs sm:text-sm text-gray-600 dark:text-[#C7D2FE] uppercase uppercase tracking-wider text-center leading-tight max-w-[90px] sm:max-w-none">
         {stat.label}
       </p>
     </div>

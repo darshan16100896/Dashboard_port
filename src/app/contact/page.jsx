@@ -45,14 +45,45 @@ export default function ContactPage() {
             Contact Me
           </h1>
         </div>
-        <div className="mx-auto">
-          <div className="bg-gradient-to-br from-blue-500 to-purple-600 w-2xl fade-in p-10 rounded-3xl shadow-lg">
-            <div>
-              <div></div>
-              <p className="text-white text-center">Call Me Directly </p>
+        <div className="relative group">
+          {/* Outer Glow Effect */}
+          <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+
+          <form className="relative bg-white/5 backdrop-blur-2xl border border-white/10 p-8 md:p-12 rounded-2xl shadow-2xl space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <FloatingInput
+                label="Full Name"
+                type="text"
+                placeholder="John Doe"
+              />
+              <FloatingInput
+                label="Email Address"
+                type="email"
+                placeholder="john@example.com"
+              />
             </div>
-          </div>
-          <div></div>
+
+            <FloatingInput
+              label="Subject / Project Type"
+              type="text"
+              placeholder="App Design"
+            />
+
+            <div className="relative">
+              <textarea
+                className="w-full bg-transparent border-b-2 border-slate-700 py-4 focus:outline-none focus:border-purple-500 transition-colors peer placeholder-transparent"
+                placeholder="Message"
+                rows="4"
+              />
+              <label className="absolute left-0 -top-3.5 text-slate-500 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-4 peer-focus:-top-3.5 peer-focus:text-purple-500 peer-focus:text-sm">
+                Your Message
+              </label>
+            </div>
+
+            <button className="w-full py-4 bg-white text-black font-bold rounded-lg hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2">
+              Send Message <ArrowRightIcon className="w-5 h-5" />
+            </button>
+          </form>
         </div>
       </div>
     </div>

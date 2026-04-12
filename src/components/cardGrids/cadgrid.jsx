@@ -14,7 +14,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "next-themes";
 import { Slash } from "lucide-react";
-import ProjectImage from "../../../public/Images/my-works.png";
+import ProjectImage from "../../../public/images/portfolio-2.webp";
 import Image from "next/image";
 import StatsCard from "../stats";
 import ServicesOffering from "../serviceOffering/page";
@@ -24,7 +24,10 @@ import ArticleCard from "../linkedInArticle/page";
 
 export default function CardGrid() {
   return (
-    <section className="w-full text-white py-12 sm:py-16" id="next-section">
+    <section
+      className="w-full text-white py-12 sm:py-16 fade-in"
+      id="next-section"
+    >
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-auto gap-4 sm:gap-6">
         {/* Profile Card (taller) */}
         <div
@@ -66,13 +69,13 @@ export default function CardGrid() {
 
               {/* STATUS BADGE */}
               <div
-                className="py-2 px-4 flex items-center justify-center md:justify-start 
+                className="py-2 px-4 flex items-center justify-center md:justify-start bg-emerald-50
         dark:bg-[#031f1c] gap-2 border border-gray-300 dark:border-[#073d38] 
         rounded-md w-fit mx-auto md:mx-0 mt-4"
               >
-                <div className="dark:bg-[#2ec4b6] h-2 w-2 rounded-full animate-pulse"></div>
+                <div className="bg-emerald-400 dark:bg-[#2ec4b6] h-2 w-2 rounded-full animate-pulse"></div>
 
-                <p className="text-xs sm:text-sm text-gray-600 dark:text-[#2ec4b6]">
+                <p className="text-xs sm:text-sm text-emerald-400 dark:text-[#2ec4b6]">
                   Available for freelance
                 </p>
               </div>
@@ -131,10 +134,8 @@ export default function CardGrid() {
           {/* BOTTOM CONTENT */}
           <div className="flex items-center justify-between gap-3">
             <div>
-              <p className="text-xs sm:text-sm text-white/60 uppercase">
-                showcase
-              </p>
-              <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-white leading-tight">
+              <p className="para-label">showcase</p>
+              <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white leading-tight">
                 Projects
               </h3>
             </div>
@@ -144,7 +145,16 @@ export default function CardGrid() {
         </div>
 
         {/* Articles card */}
-        <div className="col-span-1 row-span-1 p-6 rounded-2xl bg-[#f7f7f7] dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg relative hover:scale-[1.02] active:scale-[0.98] transition">
+        <div
+          className="col-span-1 row-span-1
+  p-4 sm:p-5 md:p-6
+  rounded-2xl
+  bg-[#f7f7f7] dark:bg-white/3 dark:hover:bg-white/5
+  backdrop-blur-md border border-gray-300 dark:border-white/10
+  shadow-lg
+  flex flex-col justify-between
+  hover:scale-[1.02] active:scale-[0.98] transition group"
+        >
           <div className="flex justify-center mb-6">
             <a
               href="https://linkedin.com/in/yourprofile"
@@ -202,16 +212,20 @@ export default function CardGrid() {
             </a>
           </div>
 
-          <div className="mt-6 flex items-center justify-between">
-            <div className="w-1/2">
-              <p className="text-[14px] text-gray-600 dark:text-white/60 font-regular uppercase">
-                UX Insights
-              </p>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+          <div
+            className="
+    flex items-center justify-between
+    gap-3
+  "
+          >
+            <div>
+              <p className="para-label">UX Insights</p>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                 LinkedIn
               </h3>
             </div>
-            <AnimatedIconButton href="/articles" />
+
+            <AnimatedIconButton href="https://www.behance.net/darshanmakwana0896" />
           </div>
         </div>
 
@@ -228,7 +242,7 @@ export default function CardGrid() {
   backdrop-blur-md border border-gray-300 dark:border-white/10
   shadow-lg
   flex flex-col justify-between
-  hover:scale-[1.02] active:scale-[0.98] transition
+  hover:scale-[1.02] active:scale-[0.98] transition group
 "
         >
           {/* TOP CONTENT */}
@@ -303,9 +317,7 @@ export default function CardGrid() {
   "
           >
             <div>
-              <p className="text-xs sm:text-sm text-gray-600 dark:text-white/60 uppercase">
-                Stay with me
-              </p>
+              <p className="para-label">Stay with me</p>
               <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
                 Profile
               </h3>
@@ -316,16 +328,16 @@ export default function CardGrid() {
         </div>
 
         {/* Stats */}
-        <div className="col-span-1 sm:col-span-2 lg:col-span-2 p-6 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 shadow-lg flex flex-col items-center justify-center hover:scale-[1.02] active:scale-[0.98] transition">
+        <div className="bg-[#f7f7f7] shadow-lg col-span-1 sm:col-span-2 lg:col-span-2 p-6 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-md border border-white/10 flex flex-col items-center justify-center hover:scale-[1.02] active:scale-[0.98] transition">
           <StatsCard />
         </div>
 
         {/* CTA */}
-        <div className="col-span-1 sm:col-span-2 lg:col-span-2 p-8 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl hover:scale-[1.02] active:scale-[0.98] transition">
+        <div className="bg-[#f7f7f7] col-span-1 sm:col-span-2 lg:col-span-2 p-8 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl hover:scale-[1.02] active:scale-[0.98] transition group">
           <div></div>
           <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div className="w-1/2">
-              <p className="text-[14px] text-gray-600 dark:text-white/60 font-regular uppercase">
+              <p className="text-[14px] text-gray-600 dark:text-[#C7D2FE] font-regular uppercase">
                 Contact Me
               </p>
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white">

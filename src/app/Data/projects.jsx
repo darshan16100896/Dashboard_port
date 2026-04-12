@@ -101,90 +101,67 @@ const projects = [
 
     behance: "https://www.behance.net/gallery/130396259/landing-page-Design",
   },
-  {
-    id: "ui-3",
-    title: "Barbaros Barbers Davos",
-    category: "Web Design",
-
-    //Thumbnail
-    thumbnail: "/images/ui-1.jpg",
-
-    // 🔥 Hero banner
-    banner: "/images/ui-1.jpg",
-
-    // 🔥 Short intro (use first paragraph)
-    summary:
-      "A bold and modern landing page for Barbaros Barbers Davos, crafted to reflect strength, masculinity, and premium quality through dark visuals and striking red accents.",
-
-    // 🔥 Elements section
-    elementsText:
-      "The website elements focus on strong typography, clear hierarchy, and impactful imagery to create a memorable first impression while maintaining usability.",
-
-    elementImages: [
-      "/images/barber-layout.webp",
-      "/images/barber-layout.webp", // duplicate or second layout image
-    ],
-
-    // 🔥 Tech / tools
-    tech: ["UI Design", "Web Design", "Figma", "Photoshop"],
-
-    behance:
-      "https://www.behance.net/gallery/130100457/Creative-Homepage-Design",
-  },
-  {
-    id: "ui-4",
-    title: "Barbaros Barbers Davos",
-    category: "Web Design",
-
-    //Thumbnail
-    thumbnail: "/images/ui-1.jpg",
-
-    // 🔥 Hero banner
-    banner: "/images/ui-1.jpg",
-
-    // 🔥 Short intro (use first paragraph)
-    summary:
-      "A bold and modern landing page for Barbaros Barbers Davos, crafted to reflect strength, masculinity, and premium quality through dark visuals and striking red accents.",
-
-    // 🔥 Elements section
-    elementsText:
-      "The website elements focus on strong typography, clear hierarchy, and impactful imagery to create a memorable first impression while maintaining usability.",
-
-    elementImages: [
-      "/images/e-barbaros-01.jpg",
-      "/images/e-barbaros-02.jpg", // duplicate or second layout image
-    ],
-
-    // 🔥 Tech / tools
-    tech: ["UI Design", "Web Design", "Figma", "Photoshop"],
-
-    behance:
-      "https://www.behance.net/gallery/130100457/Creative-Homepage-Design",
-  },
 
   // Social Media Design
   {
-    id: "social-1",
+    id: "social-2",
     title: "Instagram Campaign",
     category: "Social Media Design",
-    image: "/images/social-1.jpg",
-    description: "Creative campaign visuals for Instagram.",
-    images: ["/images/social-1.jpg", "/images/social-1b.jpg"],
-    liveLink: "https://example.com",
-    behance: "https://behance.net/example",
+
+    //Thumbnail
+    thumbnail: "/images/Social01.webp",
+
+    // 🔥 Hero banner
+    banner: "/images/SocialBanner.webp",
+
+    // 🔥 Short intro (use first paragraph)
+    summary:
+      "Transforming ideas into scroll-stopping visuals. My social media designs are built to spark curiosity, boost engagement, and make brands stand out in a crowded digital space.",
+
+    // 🔥 Elements section
+    elementsText:
+      "The website elements focus on strong typography, clear hierarchy, and impactful imagery to create a memorable first impression while maintaining usability.",
+
+    elementImages: [
+      "/images/e-grapevine-01.webp",
+      "/images/e-grapevine-02.webp", // duplicate or second layout image
+    ],
+
+    // 🔥 Tech / tools
+    tech: ["UI Design", "Web Design", "Figma", "Photoshop", "Illustrator"],
+
+    behance: "https://www.behance.net/gallery/130396259/landing-page-Design",
   },
 
   // Mobile App
   {
-    id: "mobile-1",
-    title: "Task Manager App",
-    category: "Mobile App Design",
-    image: "/images/mobile-1.jpg",
-    description:
-      "A task management app designed to help users organize and prioritize their tasks effectively.",
-    images: ["/images/mobile-1.jpg"],
-    liveLink: "https://medium.com/example",
-    behance: "",
+    id: "app-1",
+    title: "Application UI Design",
+    category: "App Design",
+
+    //Thumbnail
+    thumbnail: "/images/App01.webp",
+
+    // 🔥 Hero banner
+    banner: "/images/SocialBanner.webp",
+
+    // 🔥 Short intro (use first paragraph)
+    summary:
+      "Transforming ideas into scroll-stopping visuals. My social media designs are built to spark curiosity, boost engagement, and make brands stand out in a crowded digital space.",
+
+    // 🔥 Elements section
+    elementsText:
+      "The website elements focus on strong typography, clear hierarchy, and impactful imagery to create a memorable first impression while maintaining usability.",
+
+    elementImages: [
+      "/images/e-grapevine-01.webp",
+      "/images/e-grapevine-02.webp", // duplicate or second layout image
+    ],
+
+    // 🔥 Tech / tools
+    tech: ["UI Design", "Web Design", "Figma", "Photoshop", "Illustrator"],
+
+    behance: "https://www.behance.net/gallery/130396259/landing-page-Design",
   },
 ];
 
