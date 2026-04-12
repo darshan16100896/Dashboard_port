@@ -506,7 +506,7 @@ export default function PortfolioPage() {
 
           {/* Description */}
           <p
-            className="mt-4 text-sm sm:text-base text-gray-400 dark:text-gray-500 max-w-lg leading-relaxed"
+            className="mt-4 text-sm sm:text-base text-gray-600 dark:text-[#C7D2FE] max-w-lg leading-relaxed"
             style={{
               opacity: headerVisible ? 1 : 0,
               transform: headerVisible ? "translateY(0)" : "translateY(12px)",

@@ -363,7 +363,7 @@ export default function ArticlesPage() {
           </h1>
 
           <p
-            className="mt-5 text-sm sm:text-base text-gray-400 dark:text-gray-500 max-w-md mx-auto leading-relaxed"
+            className="mt-5 text-sm sm:text-base text-gray-600 dark:text-[#C7D2FE] max-w-md mx-auto leading-relaxed"
             style={{
               opacity: headerVisible ? 1 : 0,
               transform: headerVisible ? "translateY(0)" : "translateY(12px)",

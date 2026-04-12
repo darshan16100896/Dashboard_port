@@ -77,19 +77,6 @@ const SKILLS = [
   },
   {
     id: 5,
-    title: "Sketch",
-    image: "/images/sketch.webp",
-    categories: ["proto", "handoff"],
-    years: "4 yrs",
-    proficiency: 80,
-    tier: "Primary",
-    useCase: "Modular design libraries, symbol systems, plugin workflows",
-    description: "Component-based UI design & symbols",
-    color: "#1D9E75",
-    colorBg: "rgba(29,158,117,0.08)",
-  },
-  {
-    id: 6,
     title: "InVision",
     image: "/images/invision.webp",
     categories: ["proto"],
@@ -100,32 +87,6 @@ const SKILLS = [
     description: "Collaborative prototyping & feedback",
     color: "#D85A30",
     colorBg: "rgba(216,90,48,0.08)",
-  },
-  {
-    id: 7,
-    title: "Zeplin",
-    image: "/zeplin.webp",
-    categories: ["handoff"],
-    years: "4 yrs",
-    proficiency: 78,
-    tier: "Primary",
-    useCase: "Redlines, asset exports, component specs, annotations",
-    description: "Design-to-dev handoff & spec delivery",
-    color: "#7F77DD",
-    colorBg: "rgba(127,119,221,0.08)",
-  },
-  {
-    id: 8,
-    title: "Canva",
-    image: "/canva.webp",
-    categories: ["visual"],
-    years: "5 yrs",
-    proficiency: 85,
-    tier: "Secondary",
-    useCase: "Social media graphics, pitch decks, quick brand templates",
-    description: "Marketing materials & social content",
-    color: "#1D9E75",
-    colorBg: "rgba(29,158,117,0.08)",
   },
   {
     id: 9,
@@ -527,7 +488,7 @@ export default function Skills() {
             <br className="hidden sm:block" />
             <span className="text-gray-900 dark:text-white"> Stack</span>
           </h1>
-          <p className="mt-5 text-sm sm:text-base text-gray-500 dark:text-gray-400 max-w-md mx-auto leading-relaxed">
+          <p className="mt-5 text-sm sm:text-base text-gray-600 dark:text-[#C7D2FE] max-w-md mx-auto leading-relaxed">
             Tools and technologies I use to design and build modern digital
             experiences — from first sketch to final handoff.
           </p>
