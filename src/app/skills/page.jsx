@@ -17,7 +17,7 @@ const CATEGORIES = [
 
 const STATS = [
   { value: "6+", label: "Years Experience" },
-  { value: "22", label: "Tools Mastered" },
+  { value: "15", label: "Tools Mastered" },
   { value: "3", label: "Design Systems Built" },
   { value: "50+", label: "Products Shipped" },
 ];
@@ -88,62 +88,10 @@ const SKILLS = [
     color: "#D85A30",
     colorBg: "rgba(216,90,48,0.08)",
   },
-  {
-    id: 9,
-    title: "Maze",
-    image: "/images/maze.webp",
-    categories: ["research"],
-    years: "2 yrs",
-    proficiency: 70,
-    tier: "Primary",
-    useCase: "Remote user tests, tree testing, heatmaps, task success metrics",
-    description: "Unmoderated usability testing at scale",
-    color: "#D4537E",
-    colorBg: "rgba(212,83,126,0.08)",
-  },
-  {
-    id: 10,
-    title: "Hotjar",
-    image: "/images/hotjar.webp",
-    categories: ["research"],
-    years: "3 yrs",
-    proficiency: 82,
-    tier: "Primary",
-    useCase: "Heatmaps, click tracking, conversion funnels, scroll depth",
-    description: "Behaviour analytics & session recordings",
-    color: "#EF9F27",
-    colorBg: "rgba(239,159,39,0.08)",
-  },
-  {
-    id: 11,
-    title: "Storybook",
-    image: "/images/storybook.webp",
-    categories: ["handoff", "proto"],
-    years: "2 yrs",
-    proficiency: 60,
-    tier: "Secondary",
-    useCase: "Documenting design system components with dev team",
-    description: "Component documentation & design system",
-    color: "#378ADD",
-    colorBg: "rgba(55,138,221,0.08)",
-  },
-  {
-    id: 12,
-    title: "Principle",
-    image: "/images/principle.webp",
-    categories: ["proto"],
-    years: "2 yrs",
-    proficiency: 65,
-    tier: "Secondary",
-    useCase:
-      "Motion design specs, transition flows, gesture-based interactions",
-    description: "Advanced micro-interaction prototyping",
-    color: "#D85A30",
-    colorBg: "rgba(216,90,48,0.08)",
-  },
+
   // ── Code & Markup ──────────────────────────────────────
   {
-    id: 13,
+    id: 10,
     title: "HTML5",
     image: "/images/html.webp",
     categories: ["code"],
@@ -156,7 +104,7 @@ const SKILLS = [
     colorBg: "rgba(216,90,48,0.08)",
   },
   {
-    id: 14,
+    id: 11,
     title: "CSS3",
     image: "/images/css.webp",
     categories: ["code"],
@@ -169,20 +117,20 @@ const SKILLS = [
     colorBg: "rgba(55,138,221,0.08)",
   },
   {
-    id: 15,
+    id: 12,
     title: "JavaScript",
     image: "/images/js.webp",
     categories: ["code"],
     years: "4 yrs",
     proficiency: 75,
-    tier: "Secondary",
+    tier: "Primary",
     useCase: "Interaction logic, prototyping in browser, component behaviour",
     description: "Interactivity & browser logic",
     color: "#EF9F27",
     colorBg: "rgba(239,159,39,0.08)",
   },
   {
-    id: 16,
+    id: 13,
     title: "Tailwind CSS",
     image: "/images/tailwind.webp",
     categories: ["code"],
@@ -195,7 +143,7 @@ const SKILLS = [
     colorBg: "rgba(29,158,117,0.08)",
   },
   {
-    id: 17,
+    id: 14,
     title: "Styled Components",
     image: "/images/styled.webp",
     categories: ["code"],
@@ -210,21 +158,20 @@ const SKILLS = [
 
   // ── AI Tools ───────────────────────────────────────────
   {
-    id: 18,
-    title: "Midjourney",
-    image: "/images/midjourney.webp",
+    id: 15,
+    title: "Freepik AI",
+    image: "/images/freepik-ai.webp",
     categories: ["AI"],
-    years: "2 yrs",
-    proficiency: 88,
+    years: "4 yrs",
+    proficiency: 95,
     tier: "Primary",
-    useCase:
-      "Mood boards, concept visuals, client presentations, art direction",
+    useCase: "concept visuals, client presentations, art direction",
     description: "AI image generation for concepts",
     color: "#7F77DD",
     colorBg: "rgba(127,119,221,0.08)",
   },
   {
-    id: 19,
+    id: 16,
     title: "Galileo AI",
     image: "/images/galileo.webp",
     categories: ["AI", "visual"],
@@ -237,7 +184,7 @@ const SKILLS = [
     colorBg: "rgba(55,138,221,0.08)",
   },
   {
-    id: 20,
+    id: 17,
     title: "ChatGPT",
     image: "/images/chatgpt.webp",
     categories: ["AI"],
@@ -251,12 +198,12 @@ const SKILLS = [
     colorBg: "rgba(29,158,117,0.08)",
   },
   {
-    id: 21,
+    id: 18,
     title: "Claude",
     image: "/images/claude.webp",
     categories: ["AI"],
     years: "1 yr",
-    proficiency: 85,
+    proficiency: 95,
     tier: "Primary",
     useCase: "UX writing, design critique, accessibility audits, code review",
     description: "AI for design thinking & writing",
@@ -264,15 +211,16 @@ const SKILLS = [
     colorBg: "rgba(239,159,39,0.08)",
   },
   {
-    id: 22,
-    title: "Runway ML",
-    image: "/images/runway.webp",
+    id: 19,
+    title: "Lovable",
+    image: "/images/lovable.webp",
     categories: ["AI"],
-    years: "1 yr",
-    proficiency: 65,
+    years: "2 yr",
+    proficiency: 75,
     tier: "Secondary",
-    useCase: "Motion graphics, video generation for product demos & reels",
-    description: "AI video & motion generation",
+    useCase:
+      "Creating and launching simple web apps or landing pages quickly without deep coding knowledge.",
+    description: "Creating web apps or landing pages",
     color: "#D4537E",
     colorBg: "rgba(212,83,126,0.08)",
   },
@@ -480,7 +428,7 @@ export default function Skills() {
 
   return (
     <div className="w-full min-h-screen">
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 my-14 sm:py-24">
         {/* ── Header ── */}
         <div className="text-center mb-14 sm:mb-20">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-heading uppercase leading-tight tracking-tight text-gray-900 dark:text-white">
@@ -490,7 +438,7 @@ export default function Skills() {
           </h1>
           <p className="mt-5 text-sm sm:text-base text-gray-600 dark:text-[#C7D2FE] max-w-md mx-auto leading-relaxed">
             Tools and technologies I use to design and build modern digital
-            experiences — from first sketch to final handoff.
+            experiences from first sketch to final handoff.
           </p>
         </div>
 

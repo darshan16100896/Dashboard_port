@@ -432,7 +432,7 @@ export default function PortfolioPage() {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-4 sm:px-6 py-14 sm:py-20">
+      <div className="relative z-10 w-full max-w-300 mx-auto px-4 sm:px-6 my-14 py-20 sm:py-20">
         {/* ── Header ── */}
         <div ref={headerRef} className="mb-14 sm:mb-18">
           {/* Eyebrow */}
@@ -457,8 +457,7 @@ export default function PortfolioPage() {
             }}
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-heading uppercase leading-none tracking-tighter text-gray-900 dark:text-white">
-              My Work
-              <span className="text-gray-200 dark:text-white/10">.</span>
+              My Work.
             </h1>
 
             {/* View toggle */}

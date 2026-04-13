@@ -1,7 +1,3 @@
-import AnimatedIconButton from "@/components/animatedButton/animatedButton";
-import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBehance, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import CardGrid from "@/components/cardGrids/cadgrid";
 export default function Home() {
   return (

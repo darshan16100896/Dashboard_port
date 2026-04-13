@@ -37,7 +37,7 @@ const projects = [
       "https://www.behance.net/gallery/130100457/Creative-Homepage-Design",
   },
   {
-    id: "ui-1",
+    id: "ui2",
     title: "Barbaros Barbers Davos",
     category: "Web Design",
 
@@ -73,7 +73,7 @@ const projects = [
       "https://www.behance.net/gallery/130100457/Creative-Homepage-Design",
   },
   {
-    id: "ui-2",
+    id: "ui-3",
     title: "Grapevine",
     category: "Web Design",
 

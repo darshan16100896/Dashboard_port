@@ -1,24 +1,12 @@
 import AnimatedIconButton from "@/components/animatedButton/animatedButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBehance, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { BackgroundRippleEffect } from "../ui/background-ripple-effect";
-// import PulseGrid from "../baclgroundripple/backgroundrippleeffect";
+import { faBehance } from "@fortawesome/free-brands-svg-icons";
 import Headshot from "../../../public/images/headshot-image.webp";
 
-import {
-  faBugSlash,
-  faCode,
-  faPaintBrush,
-  faSwatchbook,
-  faWandMagicSparkles,
-} from "@fortawesome/free-solid-svg-icons";
-import { useTheme } from "next-themes";
-import { Slash } from "lucide-react";
 import ProjectImage from "../../../public/images/portfolio-2.webp";
 import Image from "next/image";
 import StatsCard from "../stats";
 import ServicesOffering from "../serviceOffering/page";
-import UXProcessBar from "../RecentWorkCard/page";
 import RecentWorkCard from "../RecentWorkCard/page";
 import ArticleCard from "../linkedInArticle/page";
 
@@ -101,7 +89,7 @@ export default function CardGrid() {
 
         <ArticleCard
           title="UI/UX Designer, Graphic Designer..."
-          description="Let’s break it down: In the world of digital design..."
+          description="Let's break it down: In the world of digital design..."
           link="https://www.linkedin.com/posts/darshan-makwana-4a743514a_uidesign-uxdesign-graphicdesign-activity-7368707492282806275-WFN4?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQD538BfbR4EKR77Cs1Oma0ubq9AtqjJ80"
         />
 
@@ -333,18 +321,46 @@ export default function CardGrid() {
         </div>
 
         {/* CTA */}
-        <div className="bg-[#f7f7f7] col-span-1 sm:col-span-2 lg:col-span-2 p-8 rounded-2xl dark:bg-white/2 dark:hover:bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl hover:scale-[1.02] active:scale-[0.98] transition group">
-          <div></div>
-          <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div className="w-1/2">
-              <p className="text-[14px] text-gray-600 dark:text-[#C7D2FE] font-regular uppercase">
-                Contact Me
-              </p>
-              <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
-                Let's Talk
-              </h3>
+        <div className="relative overflow-hidden bg-[#f7f7f7] col-span-1 sm:col-span-2 lg:col-span-2 p-8 border rounded-2xl border-white/10 dark:bg-white/2 dark:hover:bg-white/5 shadow-xl hover:scale-[1.01] active:scale-[0.99] transition-all duration-500 group">
+          {/* 1. Premium Ambient Background Glow */}
+          <div className="absolute -right-10 -top-10 w-40 h-40 bg-blue-600/10 blur-[80px] group-hover:bg-blue-600/20 transition-all duration-500" />
+
+          <div className="relative z-10 flex flex-col justify-between h-full">
+            {/* 2. Top Section: Added a premium icon or decorative element */}
+            <div className="flex justify-between items-start">
+              <div className="p-3 rounded-2xl bg-white dark:bg-white/5 border border-black/5 dark:border-white/10 shadow-sm">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="text-blue-500"
+                >
+                  <path
+                    d="M8 9h8m-8 4h6m4-9a3 3 0 013 3v7a3 3 0 01-3 3h-4l-4 4-4-4H5a3 3 0 01-3-3V7a3 3 0 013-3h14z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </div>
             </div>
-            <AnimatedIconButton href="https://google.com" />
+
+            {/* 3. Bottom Section: Text and Action */}
+            <div className="mt-12 flex items-end justify-between gap-4">
+              <div>
+                <p className="para-label">Available for Projects</p>
+                <h3 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  Let's Talk.
+                </h3>
+              </div>
+
+              {/* Your existing button component */}
+              <div className="mb-1">
+                <AnimatedIconButton href="/contact" />
+              </div>
+            </div>
           </div>
         </div>
       </div>

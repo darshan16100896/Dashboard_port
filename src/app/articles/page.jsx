@@ -335,7 +335,7 @@ export default function ArticlesPage() {
         }}
       />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 my-14 sm:py-20">
         {/* ── Header ── */}
         <div className="text-center mb-12 sm:mb-16">
           <p
@@ -488,7 +488,7 @@ export default function ArticlesPage() {
               Want more? Follow me on LinkedIn for weekly articles.
             </p>
             <Link
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/darshan0makwana/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl text-sm font-semibold bg-[#0A66C2] text-white hover:bg-[#004182] transition-colors"
