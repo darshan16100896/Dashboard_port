@@ -58,14 +58,15 @@ export default function HeroSection() {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 text-center">
         {/* ── Eyebrow ── */}
-        <div style={line(0.05)} className="mb-7">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
-            {/* Pulsing green availability dot */}
+        <div style={line(0.05)} className="mb-6 sm:mb-7">
+          <div className="inline-flex items-center gap-2 rounded-full border border-black/10 dark:border-white/10 bg-black/[0.03] dark:bg-white/[0.05] backdrop-blur-sm px-3.5 py-1.5">
+            {/* Pulsing availability dot */}
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
             </span>
-            <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/45">
+
+            <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-black/45 dark:text-white/45">
               Senior UX / UI Designer · Available for work
             </span>
           </div>
@@ -100,13 +101,15 @@ export default function HeroSection() {
         >
           {/* Description */}
           <p
-            className="mb-2 max-w-2xl text-base sm:text-[1.05rem] leading-relaxed text-white/42"
+            className="mb-2 max-w-2xl text-base sm:text-[1.05rem] leading-relaxed text-black dark:text-white/42"
             style={line(0.4)}
           >
-            <strong className="text-white/65 font-medium">6+ years</strong>{" "}
+            <strong className="text-blue-500 dark:text-white/65 font-medium">
+              6+ years
+            </strong>{" "}
             designing user-centered digital products for startups and scaling
             brands. Specialized in{" "}
-            <strong className="text-white/65 font-medium">
+            <strong className="text-blue-500 dark:text-white/65 font-medium">
               SaaS and web apps
             </strong>
             , with expertise in AI-powered UX research, prototyping, and modern
@@ -151,15 +154,15 @@ export default function HeroSection() {
             {/* SECONDARY — ghost, clearly lighter */}
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/12 bg-white/4 text-sm font-medium text-white/55 hover:border-white/25 hover:text-white/80 hover:bg-white/7 transition-all duration-200"
+              className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-xl border border-black/10 dark:border-white/12 bg-black/[0.03] dark:bg-white/[0.04] px-6 py-3 text-sm font-medium text-black/60 dark:text-white/55 transition-all duration-200 hover:border-black/20 dark:hover:border-white/25 hover:bg-black/[0.05] dark:hover:bg-white/[0.07] hover:text-black/85 dark:hover:text-white/85"
             >
               Let&apos;s Talk
             </Link>
           </div>
           <div
-            className="flex flex-wrap items-center justify-center gap-5 pt-7 w-full max-w-xl"
+            className="flex w-full flex-col sm:flex-row flex-wrap items-center justify-center gap-5 sm:gap-6 pt-6 sm:pt-7"
             style={{
-              borderTop: "0.5px solid rgba(255,255,255,0.08)",
+              borderTop: "0.5px solid rgba(120,120,120,0.18)",
               ...line(0.6),
             }}
           >
@@ -169,15 +172,19 @@ export default function HeroSection() {
                 {["#3b82f6", "#8b5cf6", "#ec4899", "#f59e0b"].map((bg, i) => (
                   <div
                     key={i}
-                    className="w-7 h-7 rounded-full border-2 border-[#0a0a0f] flex items-center justify-center text-[10px] font-bold text-white"
-                    style={{ background: bg, marginLeft: i === 0 ? 0 : "-8px" }}
+                    className="flex h-7 w-7 items-center justify-center rounded-full border-2 border-white dark:border-[#0a0a0f] text-[10px] font-bold text-white"
+                    style={{
+                      background: bg,
+                      marginLeft: i === 0 ? 0 : "-8px",
+                    }}
                   >
                     {["M", "R", "S", "K"][i]}
                   </div>
                 ))}
               </div>
-              <span className="text-xs text-white/38 leading-tight">
-                <span className="text-white/60 font-semibold">
+
+              <span className="text-left text-xs leading-tight text-black/45 dark:text-white/38">
+                <span className="font-semibold text-black/75 dark:text-white/65">
                   20+ happy clients
                 </span>
                 <br />
@@ -186,23 +193,29 @@ export default function HeroSection() {
             </div>
 
             {/* Divider */}
-            <div className="hidden sm:block w-px h-6 bg-white/10" />
+            <div className="hidden sm:block h-6 w-px bg-black/10 dark:bg-white/10" />
 
-            {/* Stat — conversion lift */}
+            {/* Avg lift */}
             <div className="text-center">
-              <div className="text-base font-bold text-white">28%</div>
-              <div className="text-[10px] text-white/35 uppercase tracking-wide">
+              <div className="text-base font-bold text-zinc-900 dark:text-white">
+                28%
+              </div>
+
+              <div className="text-[10px] uppercase tracking-wide text-black/35 dark:text-white/35">
                 avg. lift
               </div>
             </div>
 
             {/* Divider */}
-            <div className="hidden sm:block w-px h-6 bg-white/10" />
+            <div className="hidden sm:block h-6 w-px bg-black/10 dark:bg-white/10" />
 
-            {/* Stat — products shipped */}
+            {/* Products shipped */}
             <div className="text-center">
-              <div className="text-base font-bold text-white">50+</div>
-              <div className="text-[10px] text-white/35 uppercase tracking-wide">
+              <div className="text-base font-bold text-zinc-900 dark:text-white">
+                50+
+              </div>
+
+              <div className="text-[10px] uppercase tracking-wide text-black/35 dark:text-white/35">
                 products shipped
               </div>
             </div>
