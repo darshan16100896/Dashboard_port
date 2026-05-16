@@ -736,7 +736,7 @@ export default function ResumePage() {
           <p className="text-center text-[11px] text-gray-300 dark:text-gray-600 mt-4">
             Or reach out directly at{" "}
             <a
-              href="mailto:darshanmakwana@gmail.com"
+              href="mailto:darshanmakwana0896@gmail.com"
               className="text-blue-500 hover:underline"
             >
               darshanmakwana0896@gmail.com
